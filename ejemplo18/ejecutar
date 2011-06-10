@@ -1,0 +1,2 @@
+mysql -u root --password=toor < ejemplo.sql
+python codigo.py
