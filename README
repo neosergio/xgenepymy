@@ -1,1 +1,5 @@
+Autor: Sergio Infante
 Este es un conjunto de scripts que sirven de ejemplo para el entendimiento de Python y uso con MySQL
+
+Instrucciones para la carga de datos predeterminados:
+1. Importar el archivo pythonmysql.sql dentro del servidor MySQL
