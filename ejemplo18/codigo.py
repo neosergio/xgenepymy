@@ -14,7 +14,7 @@ class Ventana:
 		self.etiqueta1 = self.builder.get_object('etiqueta1')
 		self.ventana.show_all()
 		self.builder.connect_signals(self)
-
+    	
 	def promedio(self, widget):
 		numero1 = float(self.entrada1.get_text())
 		numero2 = float(self.entrada2.get_text())
@@ -41,7 +41,8 @@ class Ventana:
 		conectar.commit()
 		cursor.close()
 		conectar.close()
-		
+					
 if __name__=="__main__":
 	variable = Ventana()
 	gtk.main()
+	
