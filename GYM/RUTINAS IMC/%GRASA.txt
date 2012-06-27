@@ -1,0 +1,19 @@
+Porcentaje de grasa corporal - El porcentaje de grasa corporal se calcula utilizando las fórmulas desarrolladas por Hodgdon y Beckett[6]. Las fórmulas requieren las mediciones en centímetros con una precisión de 0.5 cm. El formulario ha sido adaptado para aceptar también unidades inglesas. Los hombres y las mujeres requieren diferentes métodos de medición porque los hombres generalmente acumulan grasa en el abdomen (cuerpo tipo manzana, o "barriga cervecera"), mientras que las mujeres acumulan grasa en su abdomen y las caderas (cuerpo tipo pera). Las ecuaciones toman esto en cuenta.
+
+La ecuación para hombres es:
+%Grasa=495/(1.0324-0.19077(log(cintura-cuello))+0.15456(log(altura)))-450
+
+
+La ecuación para mujeres es:
+%Grasa=495/(1.29579-0.35004(log(cintura+cadera-cuello))+0.22100(log(altura)))-450
+
+
+Estos son los rangos del porcentaje de grasa corporal:
+
+
+  			Mujeres 	Hombres
+Grasa esencial    	10-14% 		2-6%
+Atleta 			14-21% 		6-14%
+Fitness 		21-25% 		14-18%
+Aceptable 		25-32% 		18-26%
+Obesidad 		32% o más 	26% o más

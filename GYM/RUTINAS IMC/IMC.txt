@@ -1,0 +1,8 @@
+Índice de Masa Corporal (IMC) - El IMC se calcula dividiendo el peso por el cuadrado de la altura. El número da una idea de la proporción del cuerpo.
+
+
+Debajo del peso normal  	IMC menos de 18.5
+Peso normal 			IMC de 18.5 a 24.9
+Sobrepeso 			IMC de 25 a 29.9
+Obesidad 			IMC 30 o mayor 
+

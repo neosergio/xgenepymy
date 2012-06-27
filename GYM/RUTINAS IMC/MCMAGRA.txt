@@ -1,0 +1,3 @@
+Masa corporal magra - Se deriva restando el peso de la grasa corporal del peso total.
+
+Masa corporal magra = Peso × (100 - %grasa corporal)

@@ -1,0 +1,86 @@
+alumno@ubuntu-dev:~$ cd GYM/
+alumno@ubuntu-dev:~/GYM$ cd Gimnasio/
+alumno@ubuntu-dev:~/GYM/Gimnasio$ sqlite3 gym.db
+SQLite version 3.7.2
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcm_tabla  rutina    
+sqlite> insert into ejercicios values (null, ' ', '', '');
+Instrucciones  formula.py     fuente.py      logica
+RUTINAS        formula.pyc    gym.db         
+sqlite> insert into ejercicios values (null, 'RUT3M', 'Abdominales', '2 series de 50 repeticiones');
+sqlite> insert into ejercicios values (null, 'RUT3M', 'Abdominales', '2 series de 50 repeticiones');press de banco horizontal^Z
+[1]+  Detenido                sqlite3 gym.db
+alumno@ubuntu-dev:~/GYM/Gimnasio$ sqlite3 gym.db
+SQLite version 3.7.2
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> 
+sqlite> .
+./  ../ 
+sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcm_tabla  rutina    
+sqlite> insert into ejercicios values (null,'RUT3M', 'Press de banco horizontal', '3 series de 12 repeticiones (barra 30kg)');
+sqlite> insert into ejercicios values (null,'RUT3M', 'Press de banco inclinado', '3 series de 12 repeticiones (barra 30kg)');
+sqlite> insert into ejercicios values (null,'RUT3M', 'Press de banco declinado', '3 series de 12 repeticiones (barra 30kg)');
+sqlite> insert into ejercicios values (null,'RUT3M', 'aperturas', '3 series de 12 repeticiones (mancuernas 10Kg-c/u)');
+sqlite> insert into ejercicios values (null,'RUT3M', 'curl frances', '3 series de 12 repeticiones (mancuernas 15Kg-c/u)');
+sqlite> insert into ejercicios values (null,'RUT3F', 'Abdominales', '2 series de 50 repeticiones);
+   ...> insert into ejercicios values (null,'RUT3F', 'Press de banco horizontal', '3 series de 12 repeticiones(barra 30Kg) );
+Error: near "RUT3F": syntax error
+sqlite> insert into ejercicios values (null,'RUT3F', 'Press de banco inclinado', '3 series de 12 repeticiones(barra 6Kg)');
+sqlite> insert into ejercicios values (null,'RUT3F', 'Press de banco declinado', '3 series de 12 repeticiones(barra 6Kg)');
+sqlite> insert into ejercicios values (null,'RUT3F', 'Aperturas', '3 series de 12 repeticiones(mancuernas 1Kg/c/u)');
+sqlite> select descripcion from imc_tabla where valor='>=32';
+sqlite> select * from imc_tabla;
+1|<15|personas en situación de inanición o delgadez extrema
+2|>15y<18.5|personas con excesiva delgadez
+3|>18.5y<25|personas con el peso ideal
+4|>25y<30|personas con sobrepeso
+5|>30y<40|personas obesas
+6|>40|personas con obesidad mórbida
+sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcm_tabla  rutina    
+sqlite> select * from pgcm_tabla;
+sqlite> select * from imc_tabla;
+1|<15|personas en situación de inanición o delgadez extrema
+2|>15y<18.5|personas con excesiva delgadez
+3|>18.5y<25|personas con el peso ideal
+4|>25y<30|personas con sobrepeso
+5|>30y<40|personas obesas
+6|>40|personas con obesidad mórbida
+sqlite> select * from ica_tabla;
+1|<0.5|personas sin adiposidad abdominal
+2|>0.5|personas con adiposidad abdominal
+sqlite> select * from pgcm_tabla;
+sqlite> select * from imc_tabla;
+1|<15|personas en situación de inanición o delgadez extrema
+2|>15y<18.5|personas con excesiva delgadez
+3|>18.5y<25|personas con el peso ideal
+4|>25y<30|personas con sobrepeso
+5|>30y<40|personas obesas
+6|>40|personas con obesidad mórbida
+sqlite> pgcm_tabla
+   ...> pgcm_tabla;
+Error: near "pgcm_tabla": syntax error
+sqlite> select descripcion from pgcm_tabla where valor='';sqlite> .schema pgcm_tabla;
+sqlite> .schema pgcm_tabla
+CREATE TABLE pgcm_tabla(id integer primary key autoincrement,
+valor string not null, descripcion text not null);
+sqlite> insert into pgcm_tabla (null, '>2y<6', 'normal');
+Error: near "null": syntax error
+sqlite> insert into pgcm_tabla values (null, '>2y<6', 'normal');
+sqlite> insert into pgcm_tabla values (null, '>=6y<14', 'Atleta');
+sqlite> insert into pgcm_tabla values (null, '>=14y<18', 'Fitnes');
+sqlite> insert into pgcm_tabla values (null, '>=18y<26', 'Aceptable');
+sqlite> insert into pgcm_tabla values (null, '>=26', 'Obesidad');
+sqlite> insert into pgcf_tabla values (null, '>10y<14', 'Normal');
+Error: no such table: pgcf_tabla
+sqlite> .schema pgcf_tabla;
+sqlite> .schema pgcf_tabla
+sqlite> select descripcion from pgcf_tabla where valor='';
+sqlite> 
+sqlite> create table pgcf_tabla (id integer primary key autoincrement, valor string not null, descripcion text not null);
+sqlite> 
+

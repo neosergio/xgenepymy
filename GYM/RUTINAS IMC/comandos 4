@@ -1,0 +1,163 @@
+alumno@ubuntu-dev:~$ sudo apt-get update
+Des:1 http://archive.canonical.com maverick Release.gpg [198B]  
+Des:2 http://extras.ubuntu.com maverick Release.gpg [72B]       
+Des:3 http://archive.ubuntu.com maverick Release.gpg [198B]     
+Ign http://archive.canonical.com/ubuntu/ maverick/partner Translation-en
+Ign http://extras.ubuntu.com/ubuntu/ maverick/main Translation-en
+Ign http://archive.ubuntu.com/ubuntu/ maverick/main Translation-en
+Ign http://archive.canonical.com/ubuntu/ maverick/partner Translation-es
+Ign http://extras.ubuntu.com/ubuntu/ maverick/main Translation-es
+Obj http://archive.ubuntu.com/ubuntu/ maverick/main Translation-es
+Des:4 http://archive.canonical.com maverick Release [5925B]     
+Ign http://archive.ubuntu.com/ubuntu/ maverick/multiverse Translation-en
+Obj http://extras.ubuntu.com maverick Release                   
+Obj http://archive.ubuntu.com/ubuntu/ maverick/multiverse Translation-es
+Ign http://archive.ubuntu.com/ubuntu/ maverick/restricted Translation-en
+Obj http://extras.ubuntu.com maverick/main Sources     
+Des:5 http://archive.canonical.com maverick/partner Sources [3856B]
+Obj http://archive.ubuntu.com/ubuntu/ maverick/restricted Translation-es
+Obj http://extras.ubuntu.com maverick/main i386 Packages        
+Des:6 http://archive.canonical.com maverick/partner i386 Packages [6442B]
+Ign http://archive.ubuntu.com/ubuntu/ maverick/universe Translation-en
+Obj http://archive.ubuntu.com/ubuntu/ maverick/universe Translation-es
+Des:7 http://archive.ubuntu.com maverick Release [39.8kB]
+Des:8 http://archive.ubuntu.com maverick/main Sources [829kB]
+Des:9 http://archive.ubuntu.com maverick/restricted Sources [4370B]
+Des:10 http://archive.ubuntu.com maverick/multiverse Sources [151kB]
+Des:11 http://archive.ubuntu.com maverick/universe Sources [4179kB]
+Des:12 http://archive.ubuntu.com maverick/main i386 Packages [1492kB]
+Des:13 http://archive.ubuntu.com maverick/restricted i386 Packages [5992B]
+Des:14 http://archive.ubuntu.com maverick/universe i386 Packages [5791kB]
+Des:15 http://archive.ubuntu.com maverick/multiverse i386 Packages [183kB]
+Ign http://archive.ubuntu.com maverick/multiverse i386 Packages 
+Ign http://archive.ubuntu.com maverick/multiverse i386 Packages 
+Des:16 http://archive.ubuntu.com maverick/multiverse i386 Packages [238kB]
+Descargados 12.6MB en 8min 0s (26.2kB/s)                        
+W: Imposible obtener http://archive.ubuntu.com/ubuntu/dists/maverick/multiverse/binary-i386/Packages.gz  La suma hash difiere
+
+E: Algunos archivos de índice no se han podido descargar, se han ignorado,
+o se ha utilizado unos antiguos en su lugar.
+alumno@ubuntu-dev:~$ sudo apt-get install sqliteman
+Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias       
+Leyendo la información de estado... Hecho
+Se instalarán los siguientes paquetes extras:
+  libaudio2 libqscintilla2-5 libqt4-dbus libqt4-sql
+  libqt4-sql-mysql libqt4-sql-sqlite libqt4-xml libqtcore4
+  libqtgui4 sqliteman-doc
+Paquetes sugeridos:
+  nas libqt4-dev qt4-qtconfig
+Se instalarán los siguientes paquetes NUEVOS:
+  libaudio2 libqscintilla2-5 libqt4-dbus libqt4-sql
+  libqt4-sql-mysql libqt4-sql-sqlite libqt4-xml libqtcore4
+  libqtgui4 sqliteman sqliteman-doc
+0 actualizados, 11 se instalarán, 0 para eliminar y 0 no actualizados.
+Necesito descargar 8634kB de archivos.
+Se utilizarán 27.4MB de espacio de disco adicional después de esta operación.
+¿Desea continuar [S/n]? s
+Des:1 http://archive.ubuntu.com/ubuntu/ maverick/main libaudio2 i386 1.9.2-3 [81.0kB]
+Des:2 http://archive.ubuntu.com/ubuntu/ maverick/main libqtcore4 i386 4:4.7.0-0ubuntu4 [1848kB]
+Des:3 http://archive.ubuntu.com/ubuntu/ maverick/main libqt4-xml i386 4:4.7.0-0ubuntu4 [134kB]
+Des:4 http://archive.ubuntu.com/ubuntu/ maverick/main libqt4-dbus i386 4:4.7.0-0ubuntu4 [238kB]
+Des:5 http://archive.ubuntu.com/ubuntu/ maverick/main libqt4-sql i386 4:4.7.0-0ubuntu4 [138kB]
+Des:6 http://archive.ubuntu.com/ubuntu/ maverick/main libqt4-sql-mysql i386 4:4.7.0-0ubuntu4 [69.3kB]
+Des:7 http://archive.ubuntu.com/ubuntu/ maverick/main libqt4-sql-sqlite i386 4:4.7.0-0ubuntu4 [62.5kB]
+Des:8 http://archive.ubuntu.com/ubuntu/ maverick/main libqtgui4 i386 4:4.7.0-0ubuntu4 [4108kB]
+Des:9 http://archive.ubuntu.com/ubuntu/ maverick/main libqscintilla2-5 i386 2.4.4-0ubuntu1 [729kB]
+Des:10 http://archive.ubuntu.com/ubuntu/ maverick/universe sqliteman i386 1.2.2-0ubuntu2 [533kB]
+Des:11 http://archive.ubuntu.com/ubuntu/ maverick/universe sqliteman-doc all 1.2.2-0ubuntu2 [694kB]
+Descargados 8634kB en 3min 1s (47.5kB/s)                        
+Seleccionando el paquete libaudio2 previamente no seleccionado.
+(Leyendo la base de datos ...  00%
+150855 ficheros y directorios instalados actualmente.)
+Desempaquetando libaudio2 (de .../libaudio2_1.9.2-3_i386.deb) ...
+Seleccionando el paquete libqtcore4 previamente no seleccionado.
+Desempaquetando libqtcore4 (de .../libqtcore4_4%3a4.7.0-0ubuntu4_i386.deb) ...
+Seleccionando el paquete libqt4-xml previamente no seleccionado.
+Desempaquetando libqt4-xml (de .../libqt4-xml_4%3a4.7.0-0ubuntu4_i386.deb) ...
+Seleccionando el paquete libqt4-dbus previamente no seleccionado.
+Desempaquetando libqt4-dbus (de .../libqt4-dbus_4%3a4.7.0-0ubuntu4_i386.deb) ...
+Seleccionando el paquete libqt4-sql previamente no seleccionado.
+Desempaquetando libqt4-sql (de .../libqt4-sql_4%3a4.7.0-0ubuntu4_i386.deb) ...
+Seleccionando el paquete libqt4-sql-mysql previamente no seleccionado.
+Desempaquetando libqt4-sql-mysql (de .../libqt4-sql-mysql_4%3a4.7.0-0ubuntu4_i386.deb) ...
+Seleccionando el paquete libqt4-sql-sqlite previamente no seleccionado.
+Desempaquetando libqt4-sql-sqlite (de .../libqt4-sql-sqlite_4%3a4.7.0-0ubuntu4_i386.deb) ...
+Seleccionando el paquete libqtgui4 previamente no seleccionado.
+Desempaquetando libqtgui4 (de .../libqtgui4_4%3a4.7.0-0ubuntu4_i386.deb) ...
+Seleccionando el paquete libqscintilla2-5 previamente no seleccionado.
+Desempaquetando libqscintilla2-5 (de .../libqscintilla2-5_2.4.4-0ubuntu1_i386.deb) ...
+Seleccionando el paquete sqliteman previamente no seleccionado.
+Desempaquetando sqliteman (de .../sqliteman_1.2.2-0ubuntu2_i386.deb) ...
+Seleccionando el paquete sqliteman-doc previamente no seleccionado.
+Desempaquetando sqliteman-doc (de .../sqliteman-doc_1.2.2-0ubuntu2_all.deb) ...
+Procesando disparadores para desktop-file-utils ...
+Procesando disparadores para python-gmenu ...
+Rebuilding /usr/share/applications/desktop.es_PE.utf8.cache...
+Procesando disparadores para hicolor-icon-theme ...
+Procesando disparadores para man-db ...
+Procesando disparadores para python-support ...
+Configurando libaudio2 (1.9.2-3) ...
+Configurando libqtcore4 (4:4.7.0-0ubuntu4) ...
+Configurando libqt4-xml (4:4.7.0-0ubuntu4) ...
+Configurando libqt4-dbus (4:4.7.0-0ubuntu4) ...
+Configurando libqt4-sql (4:4.7.0-0ubuntu4) ...
+Configurando libqt4-sql-mysql (4:4.7.0-0ubuntu4) ...
+Configurando libqt4-sql-sqlite (4:4.7.0-0ubuntu4) ...
+Configurando libqtgui4 (4:4.7.0-0ubuntu4) ...
+Configurando libqscintilla2-5 (2.4.4-0ubuntu1) ...
+Configurando sqliteman (1.2.2-0ubuntu2) ...
+Configurando sqliteman-doc (1.2.2-0ubuntu2) ...
+Procesando disparadores para libc-bin ...
+ldconfig deferred processing now taking place
+alumno@ubuntu-dev:~$ sqlite
+sqlite     sqlite3    sqliteman  
+alumno@ubuntu-dev:~$ sqlite
+sqlite     sqlite3    sqliteman  
+alumno@ubuntu-dev:~$ sqliteman 
+Checking for  sqlite3 : 
+3.7.2
+Checking for Qt version:  4.7.0 
+Initial DB:  "" 
+alumno@ubuntu-dev:~$ ls
+codigo            Escritorio           Música
+curriculum        examples.desktop     Plantillas
+curriculumlalo    formularios1         publi
+DATOSEDDO         formularios1OTRO     Público
+DATOSEDDO.tar.gz  formularios1.tar.gz  software
+Descargas         GYM                  tablon
+Documentos        Imágenes             Videos
+Ejemplito         Komodo-Edit-6        www
+alumno@ubuntu-dev:~$ cd GYM/
+alumno@ubuntu-dev:~/GYM$ ls
+comandos  comandos 2  comandos3  Gimnasio  RUTINAS IMC
+alumno@ubuntu-dev:~/GYM$ cd Gimnasio/
+alumno@ubuntu-dev:~/GYM/Gimnasio$ ls
+formula.py   fuente.py  Gym.db         logica
+formula.pyc  gym.db     Instrucciones  RUTINAS
+alumno@ubuntu-dev:~/GYM/Gimnasio$ sqliteman gym.db 
+Checking for  sqlite3 : 
+3.7.2
+Checking for Qt version:  4.7.0 
+Initial DB:  "gym.db" 
+QSqlDatabasePrivate::removeDatabase: connection 'sqliteman-db' is still in use, all queries will cease to work.
+alumno@ubuntu-dev:~/GYM/Gimnasio$ 
+alumno@ubuntu-dev:~/GYM/Gimnasio$ sqliteman gym.db 
+Checking for  sqlite3 : 
+3.7.2
+Checking for Qt version:  4.7.0 
+Initial DB:  "gym.db" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

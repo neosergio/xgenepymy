@@ -1,0 +1,136 @@
+alumno@ubuntu-dev:~$ cd GYM
+alumno@ubuntu-dev:~/GYM$ cd Gimnasio
+alumno@ubuntu-dev:~/GYM/Gimnasio$ ls
+formula.py   fuente.py  Gym.db         logica
+formula.pyc  gym.db     Instrucciones  RUTINAS
+alumno@ubuntu-dev:~/GYM/Gimnasio$ sqlite3 gym.db
+SQLite version 3.7.2
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcf_tabla  pgcm_tabla  rutina    
+sqlite> insert into pgcf_tabla values (null, '<=10', Falta de Grasa Corporal');
+   ...> insert into pgcf_tabla values (null, '>10y<14', Grasa Esencial');
+Error: near "de": syntax error
+sqlite> insert into pgcf_tabla values (null, '<=10', Falta Grasa Corporal');
+   ...> insert into pgcf_tabla values (null, '>10y<14', Grasa Esencial');
+Error: near "Grasa": syntax error
+sqlite> insert into pgcf_tabla values (null, '<=10','Falta de Grasa Corporal');
+sqlite> insert into pgcf_tabla values (null, '>10y<14', 'Grasa Esencial');
+sqlite> insert into pgcf_tabla values (null, '>=14y<21', 'Atleta');
+sqlite> insert into pgcf_tabla values (null, '>=21y<25', 'Fitness'
+   ...> 
+   ...> 
+   ...> insert into pgcf_tabla values (null, '>=21y<25', 'Fitness');
+Error: near "insert": syntax error
+sqlite> insert into pgcf_tabla values (null, '>=21y<25', 'Fitness');
+sqlite> insert into pgcf_tabla values (null, '>=25y<32', 'Aceptable');sqlite> insert into pgcf_tabla values (null, '>=32', 'Obesidad');
+sqlite> select * from pgcf_tabla
+   ...> ;
+1|<=2|Falta de Grasa Corporal
+2|>2y<6|Normal
+3|>=6y<10|Normal
+4|<=10|Falta de Grasa Corporal
+5|>10y<14|Grasa Esencial
+6|>=14y<21|Atleta
+7|>=21y<25|Fitness
+8|>=25y<32|Aceptable
+9|>=32|Obesidad
+sqlite> DROP TABLE pgcf_tabla ;
+sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcm_tabla  rutina    
+sqlite> CREATE TABLE pgcf_tabla(id integer primary key autoincrement, valor string not null, descripcion text not null);
+sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcf_tabla  pgcm_tabla  rutina    
+sqlite> select * from pgcf_tabla;
+sqlite> select * from pgcf_tabla
+   ...> select * from pgcf_tabla;
+Error: near "select": syntax error
+sqlite> insert into pgcf_tabla values (null, '<10', 'Falta de Grasa Corporal');
+sqlite> insert into pgcf_tabla values (null, '>=10y<14', 'Grasa Esencial');sqlite> insert into pgcf_tabla values (null, '>=14y<21', 'Atleta');sqlite> insert into pgcf_tabla values (null, '>=21y<25', 'Fitness');
+sqlite> insert into pgcf_tabla values (null, '>=25y<32', 'Aceptable');sqlite> insert into pgcf_tabla values (null, '>=32', 'Obesidad');
+sqlite> select * from pgcf_tabla;1|<10|Falta de Grasa Corporal
+2|>=10y<14|Grasa Esencial
+3|>=14y<21|Atleta
+4|>=21y<25|Fitness
+5|>=25y<32|Aceptable
+6|>=32|Obesidad
+sqlite> select descripcion from imc_tabla where valor='>26'
+   ...> ;
+sqlite> select * from imc_tabla;
+1|<15|personas en situación de inanición o delgadez extrema
+2|>15y<18.5|personas con excesiva delgadez
+3|>18.5y<25|personas con el peso ideal
+4|>25y<30|personas con sobrepeso
+5|>30y<40|personas obesas
+6|>40|personas con obesidad mórbida
+sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcf_tabla  pgcm_tabla  rutina    
+sqlite> select * from pgcm_tabla;
+1|>2y<6|normal
+2|>=6y<14|Atleta
+3|>=14y<18|Fitnes
+4|>=18y<26|Aceptable
+5|>=26|Obesidad
+sqlite> SELECT * from pgcm_tabla
+   ...> SELECT * from pgcm_tabla;
+Error: near "SELECT": syntax error
+sqlite> select * from pgcm_tabla;
+1|>2y<6|normal
+2|>=6y<14|Atleta
+3|>=14y<18|Fitnes
+4|>=18y<26|Aceptable
+5|>=26|Obesidad
+sqlite> select * from pgcf_tabla;
+1|<10|Falta de Grasa Corporal
+2|>=10y<14|Grasa Esencial
+3|>=14y<21|Atleta
+4|>=21y<25|Fitness
+5|>=25y<32|Aceptable
+6|>=32|Obesidad
+sqlite> DROP TABLE pgcm_tabla ;
+sqlite> CREATE TABLE pgcm_tabla(id integer primary key autoincrement, valor string not null, descripcion text not null);
+sqlite> insert into pgcm_tabla values (null, '<2', 'Falta de Grasa Corporal');
+sqlite> insert into pgcf_tabla values (null, '>=2y<6', 'Normal');sqlite> insert into pgcf_tabla values (null, '>=6y<14', 'Atleta');
+sqlite> insert into pgcf_tabla values (null, '>=14y<18', 'Fitness');
+sqlite> insert into pgcf_tabla values (null, '>=18y<26', 'Aceptable');sqlite> insert into pgcf_tabla values (null, '>=26', 'Obesidad');
+sqlite> select * from pgcf_tabla;1|<10|Falta de Grasa Corporal
+2|>=10y<14|Grasa Esencial
+3|>=14y<21|Atleta
+4|>=21y<25|Fitness
+5|>=25y<32|Aceptable
+6|>=32|Obesidad
+7|>=2y<6|Normal
+8|>=6y<14|Atleta
+9|>=14y<18|Fitness
+10|>=18y<26|Aceptable
+11|>=26|Obesidad
+sqlite> DROP TABLE pgcf_tabla ;
+sqlite> CREATE TABLE pgcf_tabla(id integer primary key autoincrement, valor string not null, descripcion text not null);
+sqlite> insert into pgcm_tabla values (null, '<2', 'Falta de Grasa Corporal');
+sqlite> insert into pgcf_tabla values (null, '>=2y<6', 'Normal');sqlite> insert into pgcf_tabla values (null, '>=6y<14', 'Atleta');sqlite> insert into pgcf_tabla values (null, '>=14y<18', 'Fitness');sqlite> insert into pgcf_tabla values (null, '>=18y<26', 'Aceptable');sqlite> insert into pgcf_tabla values (null, '>=26', 'Obesidad');sqlite> select * from pgcf_tabla;1|>=2y<6|Normal
+2|>=6y<14|Atleta
+3|>=14y<18|Fitness
+4|>=18y<26|Aceptable
+5|>=26|Obesidad
+sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcf_tabla  pgcm_tabla  rutina    
+sqlite> select * from pgcm_tabla;
+1|<2|Falta de Grasa Corporal
+2|<2|Falta de Grasa Corporal
+sqlite> DROP TABLE pgcm_tabla ;sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcf_tabla  rutina    
+sqlite> CREATE TABLE pgcm_tabla(id integer primary key autoincrement, valor string not null, descripcion text not null);
+sqlite> insert into pgcm_tabla values (null, '<10', 'Falta de Grasa Corporal');
+sqlite> insert into pgcm_tabla values (null, '>=10y<14', 'Grasa Esencial');sqlite> insert into pgcm_tabla values (null, '>=14y<21', 'Atleta');
+sqlite> insert into pgcm_tabla values (null, '>=21y<25', 'Fitness');
+sqlite> insert into pgcm_tabla values (null, '>=25y<32', 'Aceptable');
+sqlite> insert into pgcm_tabla values (null, '>=32', 'Obesidad');
+sqlite> select * from pgcm_tabla;
+1|<10|Falta de Grasa Corporal
+2|>=10y<14|Grasa Esencial
+3|>=14y<21|Atleta
+4|>=21y<25|Fitness
+5|>=25y<32|Aceptable
+6|>=32|Obesidad
+sqlite> 

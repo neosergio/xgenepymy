@@ -1,0 +1,32 @@
+alumno@ubuntu-dev:~$ cd 
+.adobe/           .gconf/           .mysqlgui/
+.cache/           .gconfd/          .nautilus/
+codigo/           .gegl-0.0/        .openoffice.org/
+.config/          .gimp-2.6/        .opera/
+curriculum/       .gnome2/          .pki/
+curriculumlalo/   .gnome2_private/  Plantillas/
+DATOSEDDO/        .gstreamer-0.10/  .pseint/
+.dbus/            .gvfs/            publi/
+Descargas/        GYM/              Público/
+.dia/             .icons/           .pulse/
+Documentos/       Imágenes/         software/
+Ejemplito/        .komodoedit/      tablon/
+Escritorio/       Komodo-Edit-6/    .themes/
+.evolution/       .local/           .thumbnails/
+.fontconfig/      .macromedia/      Videos/
+formularios1/     .mozilla/         www/
+formularios1OTRO/ Música/           
+alumno@ubuntu-dev:~$ cd GYM/
+alumno@ubuntu-dev:~/GYM$ ls
+Gimnasio  RUTINAS IMC
+alumno@ubuntu-dev:~/GYM$ cd Gimnasio/
+alumno@ubuntu-dev:~/GYM/Gimnasio$ ls
+formula.py   fuente.py  Instrucciones  RUTINAS
+formula.pyc  gym.db     logica
+alumno@ubuntu-dev:~/GYM/Gimnasio$ sqlite3 gym.db
+SQLite version 3.7.2
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> .tables
+ejercicios  ica_tabla   imc_tabla   pgcm_tabla  rutina    
+sqlite> insert into ejercicios values (null, ' ', '' , '');
